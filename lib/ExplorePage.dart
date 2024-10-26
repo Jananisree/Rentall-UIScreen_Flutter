@@ -208,7 +208,7 @@ class _ExplorepageState extends State<Explorepage> {
             icon: Icon(Icons.arrow_right, size: 40),
             onPressed: () {
               _scrollController.animateTo(
-                _scrollController.position.pixels + 100, // Adjust as needed
+                _scrollController.position.pixels + 100,
                 duration: Duration(milliseconds: 300),
                 curve: Curves.easeInOut,
               );
@@ -346,9 +346,8 @@ class _ExplorepageState extends State<Explorepage> {
   Widget buildResponsiveList<T>(
       List<T> items, Widget Function(T) builder, double screenWidth) {
     if (screenWidth < 600) {
-      // Mobile layout: Horizontal scroll
       return SizedBox(
-        height: 300, // Height for horizontal scrolling view
+        height: 300,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -362,7 +361,6 @@ class _ExplorepageState extends State<Explorepage> {
         ),
       );
     } else {
-      // Tablet/Desktop
       double screenWidth = MediaQuery.of(context).size.width;
       double childAspectRatio;
 

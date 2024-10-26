@@ -7,11 +7,11 @@ class CurvedBottomAppBarPage extends StatefulWidget {
 }
 
 class _CurvedBottomAppBarPageState extends State<CurvedBottomAppBarPage> {
-  int _selectedIndex = 0; // Track the selected index
+  int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index; // Update selected index
+      _selectedIndex = index;
     });
   }
 
@@ -42,7 +42,6 @@ class _CurvedBottomAppBarPageState extends State<CurvedBottomAppBarPage> {
               _buildNavItem(Icons.search, "Explore", 0),
               _buildNavItem(Icons.favorite_border, "Saved", 1),
 
-              // Trips text that changes color when selected
               GestureDetector(
                 onTap: () => _onItemTapped(2), // Set the index for the "Trips" text
                 child: Padding(
@@ -78,13 +77,12 @@ class _CurvedBottomAppBarPageState extends State<CurvedBottomAppBarPage> {
       case 3:
         return Text('Inbox pg');
       case 4:
-        return Text('Profile Page'); // Add a page for "Trips"
+        return Text('Profile Page');
       default:
         return Text('Profile Page');
     }
   }
 
-  // Method to build each navigation item with icon and text
   Widget _buildNavItem(IconData icon, String label, int index) {
     return GestureDetector(
       onTap: () => _onItemTapped(index),
