@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rentalluiscreen/CurvedbottomAppbarPage.dart';
 
-import 'Homepg.dart';
 
 void main() {
   runApp(const MyApp());
